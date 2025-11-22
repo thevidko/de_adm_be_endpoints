@@ -1,0 +1,20 @@
+meta {
+  name: DELETE - User
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:8000/api/v1/users/019a9dce-8bde-704d-b253-1c3d6b638bdc
+  body: none
+  auth: inherit
+}
+
+headers {
+  Accept: application/vnd.api+json
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

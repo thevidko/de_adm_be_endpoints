@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "de_adm_be_endpoints",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
