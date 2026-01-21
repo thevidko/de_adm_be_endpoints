@@ -1,0 +1,36 @@
+meta {
+  name: POST create
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/api/v1/pairs
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/vnd.api+json
+  Accept: application/vnd.api+json
+}
+
+body:json {
+  {
+    "data": {
+      "type": "de_core_pairs",
+      "attributes": {
+        "danceType": "stt",
+        "active": false,
+        "startedDate": "2023-10-27T10:00:00+02:00",
+        "maleId": "019b9eed-3e71-7399-a87e-2682aece206f",
+        "femaleId": "019b9eed-3e7f-735d-b3dc-17b7d65bc93e"
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

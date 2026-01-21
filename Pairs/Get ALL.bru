@@ -1,0 +1,20 @@
+meta {
+  name: Get ALL
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8000/api/v1/pairs?include=pairRating
+  body: none
+  auth: inherit
+}
+
+params:query {
+  include: pairRating
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

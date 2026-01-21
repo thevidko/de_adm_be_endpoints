@@ -1,0 +1,36 @@
+meta {
+  name: POST bulkDances
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:8000/api/v1/disciplines/019bb8e2-b5e8-71b9-a96e-a3a0f98ec18b/bulkDances
+  body: json
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "data": [
+      {
+        "danceUuid": "uuid-tance-waltz",
+        "order": 1
+      },
+      {
+        "danceUuid": "uuid-tance-tango",
+        "order": 2
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

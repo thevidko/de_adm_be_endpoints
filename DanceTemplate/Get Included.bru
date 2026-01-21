@@ -1,0 +1,20 @@
+meta {
+  name: Get Included
+  type: http
+  seq: 2
+}
+
+get {
+  url: http://localhost:8000/api/v1/dance-templates/019b5b87-cc5f-73d7-93f7-e69e7e3866b2?include=items.dance
+  body: none
+  auth: inherit
+}
+
+params:query {
+  include: items.dance
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

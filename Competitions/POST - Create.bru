@@ -1,0 +1,48 @@
+meta {
+  name: POST - Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/api/v1/competitions
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/vnd.api+json
+  Accept: application/vnd.api+json
+}
+
+body:json {
+  {
+    "data": {
+      "type": "de_core_competitions",
+      "attributes": {
+        "name": "Mistrovství ČR v tanci 2026",
+        "description": "Hlavní soutěž sezóny pro všechny věkové kategorie.",
+        "dateStart": "2026-05-20T09:00:00Z",
+        "location": "Sportovní hala Brno, Vodova 108",
+        "status": 1,
+        "registrationStart": "2026-01-01T00:00:00Z",
+        "registrationEnd": "2026-05-10T23:59:59Z",
+        "organizer": "Český Taneční Svaz",
+        "organizerEmail": "info@tancujeme.cz",
+        "organizerPhone": "+420 123 456 789",
+        "floorWidth": 20,
+        "floorHeight": 15,
+        "music": "Vlastní ozvučení, DJ Petr",
+        "spectatorFee": "200 Kč dospělí / 100 Kč děti",
+        "prizes": "Medaile, poháry a věcné ceny",
+        "parking": "Zdarma u haly",
+        "notes": "Přezůvky nutné."
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

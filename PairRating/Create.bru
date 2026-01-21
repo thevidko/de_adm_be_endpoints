@@ -1,0 +1,38 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/api/v1/pair-ratings
+  body: json
+  auth: inherit
+}
+
+headers {
+  Accept: application/vnd.api+json
+  Content-Type: application/vnd.api+json
+}
+
+body:json {
+  {
+    "jsonapi": {
+      "version": "1.0"
+    },
+    "data": {
+      "type": "de_core_pair_ratings",
+      "attributes": {
+        "pairId": "019b9ef5-9c1d-70ea-805a-a4030c15e71e",
+        "performanceClass": 1,
+        "points": 0,
+        "finalsCount": 0
+      }
+    }
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

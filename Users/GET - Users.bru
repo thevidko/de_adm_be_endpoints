@@ -1,0 +1,24 @@
+meta {
+  name: GET - Users
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8000/api/v1/users?page%5Bnumber%5D=1&page%5Bsize%5D=10&filter%5Brole%5D=user&filter%5Bname%5D=Cole&sort=name
+  body: none
+  auth: inherit
+}
+
+params:query {
+  page%5Bnumber%5D: 1
+  page%5Bsize%5D: 10
+  filter%5Brole%5D: user
+  filter%5Bname%5D: Cole
+  sort: name
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

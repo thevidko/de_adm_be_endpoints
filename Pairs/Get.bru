@@ -1,0 +1,21 @@
+meta {
+  name: Get
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://localhost:8000/api/v1/pairs?filter[participant]=019b9eed-3e7b-729c-bc80-33a1025768e7&include=male,female,pairRating
+  body: none
+  auth: inherit
+}
+
+params:query {
+  filter[participant]: 019b9eed-3e7b-729c-bc80-33a1025768e7
+  include: male,female,pairRating
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

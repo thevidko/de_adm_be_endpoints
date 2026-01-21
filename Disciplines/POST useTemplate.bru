@@ -1,0 +1,27 @@
+meta {
+  name: POST useTemplate
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8000/api/v1/disciplines/019bb8e2-b5e8-71b9-a96e-a3a0f98ec18b/use-template
+  body: json
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+      "dance_template_uuid": "019bb8e2-b373-7172-87fb-78662afbc3dd"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,20 @@
+meta {
+  name: GET - Competitions
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8000/api/v1/competitions?include=disciplines
+  body: none
+  auth: inherit
+}
+
+params:query {
+  include: disciplines
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
