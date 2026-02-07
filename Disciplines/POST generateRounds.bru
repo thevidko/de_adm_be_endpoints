@@ -1,0 +1,21 @@
+meta {
+  name: POST generateRounds
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:8000/api/v1/disciplines/019c0fb7-e87b-728c-ae69-cc755c1f742f/generate-rounds
+  body: json
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+  Content-Type: application/json
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

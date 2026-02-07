@@ -1,0 +1,22 @@
+meta {
+  name: Get Auth
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/api/v1/broadcasting/auth
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "channel": "judges:019c0fb7-e82f-723d-98e2-ac7ad71ec01d"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

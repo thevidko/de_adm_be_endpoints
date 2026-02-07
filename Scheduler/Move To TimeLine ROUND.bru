@@ -1,0 +1,24 @@
+meta {
+  name: Move To TimeLine ROUND
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/api/v1/competitions/019c0fb7-e830-70b8-a2e8-5983a36f5756/scheduler/items
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "schedule_item_type": 0,
+      "order": 1,
+      "round_uuid": "019c0fbb-2a46-7017-bc3d-1987f1b6fc60"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

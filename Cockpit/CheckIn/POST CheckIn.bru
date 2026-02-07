@@ -1,0 +1,37 @@
+meta {
+  name: POST CheckIn
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:8000/api/v1/competitions/019bb8e2-b5e4-72da-940b-e1e222d72007/check-in
+  body: json
+  auth: inherit
+}
+
+headers {
+  Accept: application/json
+}
+
+body:json {
+  {
+    "changes": [
+      {
+        "discipline_pair_uuid": "019bb8e2-b604-7139-b405-afe7e8962c09",
+        "bib_number": 253,
+        "status": 1
+      },
+      {
+        "discipline_pair_uuid": "019bb8e2-b609-7371-b6a5-f6bbe5a373b9",
+        "bib_number": 205,
+        "status": 1
+      }
+    ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

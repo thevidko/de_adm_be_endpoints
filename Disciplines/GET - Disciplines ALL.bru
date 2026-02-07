@@ -1,0 +1,20 @@
+meta {
+  name: GET - Disciplines ALL
+  type: http
+  seq: 7
+}
+
+get {
+  url: http://localhost:8000/api/v1/disciplines?include=rounds,competition,disciplineJudges.user
+  body: none
+  auth: inherit
+}
+
+params:query {
+  include: rounds,competition,disciplineJudges.user
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

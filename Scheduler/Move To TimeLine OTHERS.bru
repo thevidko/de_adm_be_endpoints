@@ -1,0 +1,25 @@
+meta {
+  name: Move To TimeLine OTHERS
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://localhost:8000/api/v1/competitions/019c0fb7-e830-70b8-a2e8-5983a36f5756/scheduler/items
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "schedule_item_type": 1,
+      "order": 2,
+      "label": "Obědová pauza",
+      "duration": 45
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

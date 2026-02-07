@@ -1,0 +1,25 @@
+meta {
+  name: Reorder
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8000/api/v1/competitions/019c0fb7-e830-70b8-a2e8-5983a36f5756/scheduler/reorder
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "ordered_uuids": [
+          "019c142a-cc3a-735c-bbdc-d34463e311ba",
+          "440845fa-132c-4cd4-9560-ad859c15b22b"
+      ]
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

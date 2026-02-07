@@ -1,0 +1,16 @@
+meta {
+  name: Get Scheduler Index
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8000/api/v1/competitions/019c0fb7-e830-70b8-a2e8-5983a36f5756/scheduler
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

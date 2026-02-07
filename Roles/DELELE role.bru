@@ -1,0 +1,21 @@
+meta {
+  name: DELELE role
+  type: http
+  seq: 4
+}
+
+delete {
+  url: http://localhost:8000/api/v1/roles/019c342a-e377-7205-8d8f-c02a3dc2fb57
+  body: json
+  auth: inherit
+}
+
+headers {
+  Accept: application/vnd.api+json
+  Content-Type: application/vnd.api+json
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
